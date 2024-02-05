@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MeuSite - Index</title>
+    <title>MeuSite - Produto</title>
 </head>
 <body>
-    <h1>Index</h1>
-    <h2>{{ curso }}</h2>
-    <h3>{{ titulo2 }}</h3>
-
+    <h1>Produto</h1>
     <table>
         <thead>
             <tr>
                 <th>Produto</th>
                 <th>Preço</th>
+                <th>Estoque</th>
             </tr>
         </thead>
         <tbody>
-            {% for produto in produtos %}
             <tr>
-                <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+                <td>{{ produto.nome }}</a></td>
                 <td>{{ produto.preco }}</td>
+                <td>{{ produto.estoque }}</td>
             </tr>
-            {% endfor %}
         </tbody>
     </table>
+    <a href="{% url 'index' %}">Voltar</a>
+
 </body>
 </html>
